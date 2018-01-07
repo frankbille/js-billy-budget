@@ -1,0 +1,15 @@
+{
+  "name": "js-billy-budget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/frankbille/js-billy-budget.git",
+  "author": "Frank Bille-Stauner <github@frankbille.dk>",
+  "license": "MIT",
+  "scripts": {
+    "execute-script": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
+}
