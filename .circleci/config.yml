@@ -1,6 +1,7 @@
 version: 2
+
 jobs:
-  install_dependencies:
+  build:
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
@@ -14,26 +15,16 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-  execute_script:
-    docker:
-      - image: circleci/node:8
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "yarn-lock" }}
       - run: yarn execute-script
+
 workflows:
   version: 2
   commit:
     jobs:
-      - install_dependencies
-      - execute_script
+      - build
   hourly:
     triggers:
       - schedule:
           cron: "* * * * *"
     jobs:
-      - install_dependencies
-      - execute_script
+      - build
