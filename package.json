@@ -10,6 +10,11 @@
     "execute-script": "node index.js"
   },
   "dependencies": {
-    "axios": "^0.17.1"
+    "async": "^2.6.0",
+    "axios": "^0.17.1",
+    "csv-parse": "^2.0.0",
+    "google-spreadsheet": "^2.0.4",
+    "moment-timezone": "^0.5.14",
+    "numeral": "^2.0.6"
   }
 }
