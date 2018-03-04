@@ -123,7 +123,7 @@ function exportFromBillyToGoogleSpreadsheet() {
             }).then(function (result) {
                 console.log('Latest Postings loaded');
 
-                if (result.data.transactions) {
+                if (result.data.transactions && result.data.transactions.length > 0) {
                     context.lastPostingDate = moment(result.data.transactions[0].entryDate);
                 } else {
                     context.lastPostingDate = null;
