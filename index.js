@@ -94,7 +94,9 @@ function exportFromBillyToGoogleSpreadsheet() {
                 console.log('Opening Balance loaded');
 
                 result.data.forEach(function(account) {
-                    context.balanceSheetLookup[account.accountNo].openingAmount = account.amount;
+                    if (context.balanceSheetLookup[account.accountNo]) {
+                        context.balanceSheetLookup[account.accountNo].openingAmount = account.amount;
+                    }
                 });
 
                 // Filter excluded accounts
