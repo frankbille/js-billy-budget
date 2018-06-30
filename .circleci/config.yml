@@ -19,20 +19,6 @@ jobs:
 
 workflows:
   version: 2
-  commit_2017:
-    jobs:
-      - build:
-          context: billy-budget-2017
-  hourly_2017:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-          filters:
-            branches:
-              only: master
-    jobs:
-      - build:
-          context: billy-budget-2017
   commit_2018:
     jobs:
       - build:
