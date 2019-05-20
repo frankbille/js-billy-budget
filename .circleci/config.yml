@@ -33,3 +33,17 @@ workflows:
     jobs:
       - build:
           context: billy-budget-2018
+  commit_2019:
+    jobs:
+      - build:
+          context: billy-budget-2019
+  hourly_2019:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only: master
+    jobs:
+      - build:
+          context: billy-budget-2019
