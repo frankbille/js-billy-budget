@@ -1,6 +1,6 @@
 # js-billy-budget
 
-[![CircleCI branch](https://img.shields.io/circleci/project/github/frankbille/js-billy-budget/master.svg?style=for-the-badge)](https://circleci.com/gh/frankbille/js-billy-budget)
+[![CircleCI](https://circleci.com/gh/jystrupsavvaerk/js-billy-budget.svg?style=svg)](https://circleci.com/gh/jystrupsavvaerk/js-billy-budget)
 
 Update Google Spreadsheet with numbers from Billy.
 
